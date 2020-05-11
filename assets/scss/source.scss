@@ -1,0 +1,29 @@
+@import "template/version"; // Version
+
+@import "mixins/mixins"; // Mixins
+
+@import "variables/variables"; // Variable Settings
+
+@import "template/reset"; // Browser & Wordpress Resets
+
+@import "typography/fonts"; // Load Fonts
+
+@import "typography/typography"; // Font Settings
+
+@import "template/main"; // Main Template Settings
+
+@import "animations/animations"; // Animation Styles
+
+@import "template/header"; // Header Styles
+
+@import "template/footer"; // Footer Styles
+
+@import "template/addons"; // Add On Styles
+
+@import "vendor/slick"; // Slick Slider
+
+@import "home-content/about"; // About Us
+
+@import "home-content/contact"; // Contact
+
+@import "home-content/portfolio-section"; // Contact 

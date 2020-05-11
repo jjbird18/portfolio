@@ -1,0 +1,123 @@
+#contact_section {
+  padding: 4rem 0;
+  margin:0 auto;
+  background:rgba(24, 24, 24, 1);
+    @include mq(medium) {
+      padding:3rem 0.5rem;
+    }
+    h2 {
+      text-align: center;
+      color: $teal;
+      font-size: 3rem;
+      line-height: 3.1rem;
+      margin-bottom: 15px;
+      position: relative;
+      @media all and (max-width:1024px){
+        font-size:2rem;
+        line-height:2rem;
+      }
+      span {
+        color:$teal;
+        font-weight:600;
+      }
+    }
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    text-align: center;
+    max-width: 75%;
+    margin: 0 auto;
+    color: #fff;
+    @media all and (max-width:1024px){
+      font-size:1rem;
+      max-width:100%;
+      padding:0 0.8rem;
+    }
+  }
+  input {
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 20px;
+    margin: 15px 5px 15px 0;
+    width: calc(50% - 5px);
+    float: left;
+    border:1px solid $teal;
+    background:rgba(24, 24, 24, 1);
+    @media all and (max-width:1025px){
+      float:none;
+      width:calc(100% - 5px);
+      font-size:18px;
+    }
+  }
+  textarea {
+    padding: 10px 20px;
+    color: #fff;
+    width: 100%;
+    float: none;
+    clear: both;
+    height: 200px;
+    font-size: 20px;
+    margin: 15px 0;
+    border:1px solid $teal;
+    background:rgba(24, 24, 24, 1);
+    @media all and (max-width:1025px){
+      font-size:18px;
+      width:calc(100% - 5px);
+    }
+  }
+    .wpcf7-submit {
+        padding: 10px 0;
+        font-size: 18px;
+        color: $teal;
+        background: transparent;
+        border: 1px solid $teal;
+        text-align: center;
+        display: block;
+        width: 180px;
+        float:none;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        font-weight:600;
+        margin:10px auto;
+        @include mq(medium) {
+          padding: 8px 12px;
+          font-size: 16px;
+          max-width: 150px;
+        }
+        @include mq(small) {
+          margin-top:10px;
+        }
+        &:hover {
+          background: $teal;
+          color: $white;
+          border:1px solid $teal;
+        }
+    }
+    div.wpcf7-mail-sent-ok {
+    border:none;
+    color:$white;
+    text-align:center;
+}
+  div.wpcf7-response-output {
+      margin: 2em 0.5em 1em;
+      padding: 0.2em 1em;
+      border:none;
+      color:$white;
+      text-align:center;
+  }
+
+
+  a {
+    color:$white;
+    &:hover {
+      color:$teal;
+    }
+  }
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}

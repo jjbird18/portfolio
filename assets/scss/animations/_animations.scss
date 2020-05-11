@@ -1,0 +1,51 @@
+.animate {
+  @include transition(1000ms);
+  }
+.delay_1 {
+  transition-delay: 250ms;
+	-webkit-transition-delay: 250ms;
+}
+.delay_2 {
+  transition-delay: 450ms;
+	-webkit-transition-delay: 450ms;
+}
+.delay_3 {
+  transition-delay: 650ms;
+	-webkit-transition-delay: 650ms;
+}
+.delay_4 {
+  transition-delay: 850ms;
+	-webkit-transition-delay: 850ms;
+}
+
+.fade_in {
+  opacity:0;
+}
+.slide_left {
+  -moz-transform: translateX(150px);
+  -webkit-transform: translateX(150px);
+  -o-transform: translateX(150px);
+  -ms-transform: translateX(150px);
+  transform: translateX(150px);
+}
+.slide_right {
+  -moz-transform: translateX(-150px);
+  -webkit-transform: translateX(-150px);
+  -o-transform: translateX(-150px);
+  -ms-transform: translateX(-150px);
+  transform: translateX(-150px);
+}
+.slide_up {
+  @include translate(0, 50px);
+}
+.slide_down {
+  @include translate(0, -50px);
+}
+.animate_go {
+  opacity:1;
+  -moz-transform: translateX(0) translateY(0);
+  -webkit-transform: translateX(0) translateY(0);
+  -o-transform: translateX(0) translateY(0);
+  -ms-transform: translateX(0) translateY(0);
+  transform: translateX(0) translateY(0);
+}

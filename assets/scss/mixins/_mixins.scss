@@ -1,0 +1,98 @@
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+@mixin row {
+  max-width: 80rem;
+  margin-right: auto;
+  margin-left: auto;
+  overflow:hidden;
+}
+@mixin col($cols) {
+  width: (($cols / 12) * 100%);
+  float:left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding:$padding;
+}
+@mixin push($push) {
+  position:relative;
+  left: (($push / 12) * 100%);
+}
+@mixin pull($pull) {
+  position:relative;
+  float:right;
+  right: (($pull / 12) * 100%);
+}
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+  $mq-media-query: "screen and";
+
+  @if $mq-breakpoint == landscape or $mq-breakpoint == portrait {
+    $mq-media-query: "#{$mq-media-query} (orientation: #{$mq-breakpoint})";
+  }
+  @else if $mq-breakpoint == retina {
+    $mq-media-query: "#{$mq-media-query} (-webkit-min-device-pixel-ratio: 2)," +
+                     "#{$mq-media-query} (min-resolution: 2dppx)";
+  }
+  @else {
+    // If $mq-breakpoint is a key that exists in
+    // $mq-breakpoints, get and use the value
+    @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+      $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+    }
+    $mq-media-query: "#{$mq-media-query} (max-width: #{$mq-breakpoint})";
+  }
+
+  @media #{$mq-media-query} {
+    @content;
+  }
+}
+/*------------------------------------*\
+    Translate/Transition/Transform
+\*------------------------------------*/
+@mixin transition($duration) {
+  -webkit-transition: all $duration cubic-bezier(0.455, 0.030, 0.000, 1.000);
+  -moz-transition: all $duration cubic-bezier(0.455, 0.030, 0.000, 1.000);
+  -o-transition: all $duration cubic-bezier(0.455, 0.030, 0.000, 1.000);
+  transition: all $duration cubic-bezier(0.455, 0.030, 0.000, 1.000);
+}
+@mixin translate($x, $y) {
+  -moz-transform: translateX($x) translateY($y);
+  -webkit-transform: translateX($x) translateY($y);
+  -o-transform: translateX($x) translateY($y);
+  -ms-transform: translateX($x) translateY($y);
+  transform: translateX($x) translateY($y);
+}
+@mixin scale($amount) {
+  -moz-transform: scale($amount);
+  -webkit-transform: scale($amount);
+  -o-transform: scale($amount);
+  -ms-transform: scale($amount);
+  transform: scale($amount);
+}
+@mixin transition-delay($delay) {
+  -webkit-transition-delay: $delay;
+  -moz-transition-delay: $delay;
+  -o-transition-delay: $delay;
+  transition-delay: $delay;
+}
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    DESIGN
+\*------------------------------------*/
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+}
+@mixin box-shadow($horizontal, $vertical, $blur, $spread, $r, $g, $b, $a){
+	box-shadow: $horizontal $vertical $blur $spread rgba($r,$g,$b,$a);
+	-webkit-box-shadow: $horizontal $vertical $blur $spread rgba($r,$g,$b,$a);
+	-moz-box-shadow: $horizontal $vertical $blur $spread rgba($r,$g,$b,$a);
+}

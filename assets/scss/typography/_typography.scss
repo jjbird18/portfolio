@@ -1,0 +1,104 @@
+body {
+  font-size:$font-size !important;
+  color:$font-color;
+  font-family: $family-sans-serif;
+}
+a {
+  text-decoration:none;
+  color:$href-color;
+  @include transition(300ms);
+}
+a:hover {
+  color:$hover-color;
+}
+a:focus {
+  outline:0;
+}
+a:hover,
+a:active {
+  outline:0;
+}
+p {
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family:$h1-family;
+}
+h1 {
+  font-size:$h1-size !important;
+  font-weight:$h1-weight  !important;
+  line-height:$h1-height  !important;
+  @include mq(medium){
+    font-size:$h1-tablet-size  !important;
+    line-height:$h1-tablet-height  !important;
+  }
+  @include mq(small){
+    font-size:$h1-mobile-size  !important;
+    line-height:$h1-mobile-height  !important;
+  }
+}
+.test {
+  @include row();
+  h1 {
+    @include col(4);
+    @include push (4);
+  }
+  p {
+    @include col(4);
+    @include push (4);
+  }
+  h3 {
+    @include col(4);
+    @include pull (8);
+  }
+}
+h2 {
+  font-size:$h2-size;
+  font-weight:$h2-weight;
+  color:$h2-color;
+}
+h3 {
+  font-size:$h3-size;
+  color:$h3-color;
+}
+h4 {
+  font-size:$h4-size;
+  color:$h4-color;
+}
+h5 {
+  font-size:$h5-size;
+  color:$h5-color;
+}
+h6 {
+  font-size:$h6-size;
+  color:$h6-color;
+}
+
+input:focus {
+  outline:0;
+}
+textarea:focus {
+  outline:0;
+}
+button:focus {
+  outline:0;
+}
+ul {
+list-style:none;
+margin:0;
+padding:0;
+}
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
