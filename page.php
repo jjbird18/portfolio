@@ -46,7 +46,7 @@ $about_description = get_field('about_description');
 							<?php if ($count == 0  ) { ?>
 
 								<div class="column is-12-mobile is-6-tablet is-12-desktop work-tile-full">
-									<div style="background: url(<?php echo $image['url']; ?>);" class="work-wrap">
+									<div style="background-position:center; background: url(<?php echo $image['url']; ?>);" class="work-wrap">
 										<div class="overlay-wrap animation-element">
 											<div class="inner-content">
 													<h3><?php echo $title; ?></h3>

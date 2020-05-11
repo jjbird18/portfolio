@@ -35,15 +35,16 @@ $image = get_field('background_image');
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
 			<section class="hero is-large">
-			  <div style="background: url(<?php echo $image['url']; ?>);" class="hero-body">
+			  <div  class="hero-body">
+					<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 			    <div class="container">
 						<div class="columns">
 							<div class="column">
-					      <h1><?php echo $h1_title; ?></h1>
-								<p><?php echo $description_text; ?></p>
+					      <h1 class="tracking-in-expand"><?php echo $h1_title; ?></h1>
+								<p class="tracking-in-expand-p"><?php echo $description_text; ?></p>
 								<div class="button-section">
-									<a id="work_btn" class="work-button">My Work</a>
-									<a id="contact_btn">Contact Me</a>
+									<a id="work_btn" class="work-button roll-in-left">My Work</a>
+									<a id="contact_btn" class="roll-in-left">Contact Me</a>
 								</div>
 							</div>
 						</div>
